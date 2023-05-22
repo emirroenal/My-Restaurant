@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="drinks.jpg" width="500px" height="400px">
+      <div class="text">ORANZADA</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="Oscypek.jpeg" width="400px" height="400px">
+      <div class="text">Oscypek</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="grzaniec.jpg" width="700px" height="400px">
+      <div class="text">Grzaniec</div>
+    </div>
+  
+   
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+  <br>
+  
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+
+    <div class="maincourse">
+        <h1><u>Food</u></h1>
+        <h2>Pierogi</h2>
+        <p>Pierogi are filled dumplings made by wrapping unleavened dough around a savory or sweet filling and cooking in boiling water.<br>
+          Pierogi or their varieties are associated with the cuisines of Central, Eastern and Southeastern Europe. Dumplings most likely originated in Asia and came to Europe via trade in the Middle Ages. 
+          The widely-used English name pierogi was derived from Polish. In some parts of Eastern Europe they are known as varenyky. Pierogi are also popular in modern-day American and Canadian cuisine, where they are sometimes known under different local names.
+
+          Typical fillings include potato, cheese, quark, sauerkraut, ground meat, edible mushrooms, and/or fruits. Savory pierogi are often served with a topping of sour cream, fried onions, or both.</p>
+        <br>
+          <hr>
+        <br>
+        <img src="Oscypek.jpeg" alt="" width="400px" height="400px">
+        <h2>Oscypek</h2>
+        <p>Oscypek (pronounced Osch-öpeck, Polish plural: oscypki), rarely Oszczypek, is a smoked cheese made of salted sheep milk exclusively in the Tatra Mountains region of Poland. Oscypek is made by an expert named "baca", 
+          a term also denoting a shepherd in the mountains. The cheese is a traditional holiday cheese in some European countries and is often pan fried and served with cranberry jam (żurawina) on the side.
+        </p>
+        <br>
+          <hr>
+        <br>
+        <h2>Bigos</h2>
+        <p>
+          Bigos, often translated into English as hunter's stew, is a Polish dish of chopped meat of various kinds stewed with sauerkraut and shredded fresh cabbage. It is served hot and can be enriched with vegetables, spices or wine.
+
+          Originally from Poland, the dish also became traditional in the areas of the vast Polish–Lithuanian Commonwealth.
+        </p>
+        <br>
+        <h1><u>Drinks</u></h1>
+        <img src="drinks.jpg" alt="" width="1000px" height="400px">
+        <h2>ORANZADA</h2>
+        <p>
+          This fizzy and sweet concoction is an alcohol-free Polish soft drink with a distinct orange flavour.
+
+          Originally from France, Oranzada became popular in Poland during the 18th century among Polish nobility and aristocracy.
+          
+          Sold in grocery stores across Poland during the Soviet occupation, Oranzada has since lost some of its popularity with the recent influx of foreign soft drinks such as Coca-Cola and Pepsi.
+          
+          Despite this, Oranzada remains one of Poland’s favourite soft drink brands and part of modern Polish culture.
+        </p>
+        <br>
+          <hr>
+        <br>
+        <img src="starka.jpg" alt="" width="500px" height="400px">
+        <h2> STARKA</h2>
+        <p>
+          Starka is a traditional Polish alcohol made from rye spirit, apple leaves and linden.
+
+          It can be traced back to Polish nobility, who consumed the drink as part of family traditions during the 1400s.
+          
+          High-quality Starka is made by ageing the fermented rye mash in oak barrels anywhere from three to 50 years.
+          
+          Many Starka brands on the market today contain rye extract and various other ingredients, which help Starka brands stand out from one another.
+          
+          After WWII, the communist government of the Polish People’s Republic nationalised the Polish alcohol market and Starka was only allowed to be produced by Polmos, the Polish state-owned spirit company.
+          
+          Since the country regained its independence in 1990, various manufacturers of this popular liquor can be found all throughout Poland.
+        </p>
+        <br>
+          <hr>
+        <br>
+        <img src="grzaniec.jpg" alt="" width="700px" height="400px">
+        <h2>GRZANIEC</h2>
+        <p>
+          Grzaniec is a mulled wine made from warm red or white wine, spices such as cloves and cinnamon, sliced oranges, sugar or honey.
+
+          Best enjoyed in winter to combat the cold weather, Grzaniec was first created more than 500 years ago and remains as popular as ever throughout Poland.
+          
+          A staple in Polish ski resorts, mountain resorts and mountainside restaurants, Grzaniec is a traditional Polish drink you must try in winter.
+          
+          While you can find various mulled wine varieties across Europe, Polish Grzaniec is one of the most popular versions of this drink.
+        </p>
+        <h1><u>Atmosphere</u></h1>
+        <img src="atmosphere1.jpg" alt="" width="800px" height="400px">
+
+        <p>
+          when strategically positioned, is an effective way to draw attention to decorative features or specific areas such as the bar, the dessert table,
+           or artwork. It creates contrast and dramatic effect and is used to separate restaurant space into different areas: for example candles or table 
+           lamps can create an intimate, more private setting around each table, while overhead lights may showcase an open kitchen and set the stage for the chef to demonstrate his or her magic. 
+        </p>
+        <br>
+        <hr>
+      <br>
+        <img src="Atmosphere 2.jpg" alt="" width="700px" height="400px">
+
+        <p>
+          Studies show that people everywhere are concerned about climate change and the environment. And many people are looking for ways to improve 
+          their environmental footprint by choosing more sustainable dining options. Taking a more sustainable approach to designing and running your 
+          restaurant can create an atmosphere in which your customers feel more hopeful and better about themselves. Of course, a green vibe has to be 
+          founded on real actions or else customers will cry greenwashing. There are many ways a restaurant can reduce its environmental footprint such 
+          as using sustainable building materials and decoration, working with local suppliers and farmers, offering more plant-based options, reducing 
+          water use and implementing energy-saving lighting and appliances, among others. Why bother? Because today every industry has a responsibility to 
+          limit their environmental impact. The added benefit is that customers will feel good about giving you their business and employees are likely to
+           feel more engaged, all of which contribute to a positive atmosphere.
+        </p>
+        <br>
+        <hr>
+      <br>
+        <img src="atmosphere3.webp" alt="" width="600px" height="400px">
+
+        <p>
+          either natural or from electrical overhead fixtures, is the foundation that creates an overall mood 
+          while enabling customers and staff to safely and comfortably occupy your restaurant space. Soft-lit, 
+          low ambient lighting tends to create a more intimate, cozy dining experience and is thought to encourage customers to linger longer. On the other hand bright ambient 
+          lighting creates a more lively, energetic vibe and may inspire diners to finish their meal sooner.
+
+        </p>
+    </div>
+</body>
+
+</html>
